@@ -227,7 +227,7 @@ def sell_stock(portfolio, ticker, shares_to_sell, sell_price):
     new_share_count = current_shares - shares_to_sell
     if new_share_count > 0:
         portfolio.stocks[ticker]['shares'] = new_share_count
-        return (f"\nSold {shares_to_sell} shares of {ticker}. Realised PnL: ${realised_pnl:,.2f}. You now own {new_share_count} shares.")
+        return (f"\nSold {shares_to_sell} shares of {ticker}. Realised PnL: ${realised_pnl:,.2f}. You now own {new_share_count:,.2f} shares.")
     else:
         # Remove the stock if the new share count is zero
         del portfolio.stocks[ticker]
@@ -256,7 +256,7 @@ def sell_crypto(portfolio, symbol, amount_to_sell, sell_price):
     new_amount = current_amount - amount_to_sell
     if new_amount > 0:
         portfolio.crypto[symbol]['amount'] = new_amount
-        return (f"\nSold {amount_to_sell} units of {symbol}. Realised PnL: ${realised_pnl:,.2f}. You now own {new_amount} units.")
+        return (f"\nSold {amount_to_sell} units of {symbol}. Realised PnL: ${realised_pnl:,.2f}. You now own {new_amount:,.2f} units.")
     else:
         # Remove the crypto if the new amount is zero
         del portfolio.crypto[symbol]
@@ -288,7 +288,7 @@ def display_portfolio(portfolio):
 
         table.append([
             ticker,
-            f"{data['shares']} shares",
+            f"{data['shares']:,.2f} shares",
             f"${stock_price:,.2f} per share",
             f"${data['shares'] * stock_price:,.2f}",
             f"${data['buy_price']:,.2f}",
@@ -310,7 +310,7 @@ def display_portfolio(portfolio):
 
         table.append([
             symbol,
-            f"{data['amount']} amount",
+            f"{data['amount']:,.2f} amount",
             f"${crypto_price:,.2f} per unit",
             f"${data['amount'] * crypto_price:,.2f}",
             f"${data['buy_price']:,.2f}",
