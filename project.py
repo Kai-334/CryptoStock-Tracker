@@ -293,7 +293,7 @@ def display_portfolio(portfolio):
             f"${data['shares'] * stock_price:,.2f}",
             f"${data['buy_price']:,.2f}",
             f"${unrealised_pnl:,.2f}",
-            f"{unrealised_pnl_percentage:.2f}%"
+            f"{unrealised_pnl_percentage:.2f} %"
         ])
 
     # cryptocurrency value
@@ -315,7 +315,7 @@ def display_portfolio(portfolio):
             f"${data['amount'] * crypto_price:,.2f}",
             f"${data['buy_price']:,.2f}",
             f"${unrealised_pnl:,.2f}",
-            f"{unrealised_pnl_percentage:.2f}%"
+            f"{unrealised_pnl_percentage:.2f} %"
         ])
 
     # Headers for table
