@@ -2,6 +2,8 @@
 
 #### Video Demo: [Watch the Video](https://www.youtube.com/watch?v=KQEegzzpwzI)
 
+![Alt text](Portfolio_example.png)
+
 ---
 
 ### Table of Contents
