@@ -1,4 +1,4 @@
-# CryptoStock Portfolio Manager
+# CryptoStock Unified Portfolio Manager
 
 #### Video Demo: [Watch the Video](https://www.youtube.com/watch?v=KQEegzzpwzI)
 
